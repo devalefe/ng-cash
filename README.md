@@ -1,15 +1,14 @@
-<h2>Apresentação do projeto</h2>
+<h1>Apresentação do projeto</h1>
 
-<img src="/media/0.png" alt="apresentação do projeto" width="60%" />
+<img src="/media/0.png" alt="apresentação do projeto" width="100%" />
 
 <h2>Descrição do projeto</h2>
 
-<p>Basicamente é um sistema de transações bancárias, onde qualquer pessoa pode realizar um cadastro e já receber R$ 100,00.
-<br/>O projeto conta com uma API em Node e um front end em React, onde é possível realizar login, cadastro, novas transações e listagem das mesmas e conta com filtro baseado em tipo e/ou data.</p>
+<p>Basicamente é um sistema de transações bancárias, onde qualquer pessoa pode realizar um cadastro e já receber R$ 100,00. O projeto conta com uma API em Node e um front end em React, onde é possível realizar login, cadastro, novas transações e listagem das mesmas e conta com filtro baseado em tipo e/ou data.</p>
 
 ## :rocket: Tecnologias usadas
 
-# Backend: 
+### Backend: 
 - [Typescript](https://www.typescriptlang.org/docs/);
 - [NodeJS](https://nodejs.org/en/);
 - [Fastify](https://www.fastify.io/);
@@ -19,7 +18,7 @@
 - [JWT](https://github.com/fastify/fastify-jwt).
 
 
-# Fontend:
+### Fontend:
 - [Typescript](https://www.typescriptlang.org/docs/);
 - [ReactJS](https://pt-br.reactjs.org/);
 - [Axios](https://axios-http.com/ptbr/docs/intro);
@@ -28,14 +27,14 @@
 - [React-Router-DOM](https://reactrouter.com/en/main/upgrading/v5);
 - [Phosphor-React](https://www.npmjs.com/package/phosphor-react).
 
-# No banco de dados usei o [PostgreSQL](https://www.postgresql.org/docs/).
+### No banco de dados usei o [PostgreSQL](https://www.postgresql.org/docs/).
 
 
 ## :white_check_mark: Requisitos
 
 <p>Para executar o projeto você precisa instalar todas as dependêcias citadas acima.</p>
 
-# Vamos começar com o backend
+### Vamos começar com o backend
 <p>Para isso siga os passos abaixo:</p>
 
 </div>
@@ -71,7 +70,7 @@ $ npm run dev
 
 ```
 
-# Agora para o frontend
+### Agora para o frontend
 
 ```bash
 
