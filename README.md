@@ -33,11 +33,9 @@
 ## :white_check_mark: Requisitos
 
 <p>Para executar o projeto você precisa instalar todas as dependêcias citadas acima.</p>
-
-### Vamos começar com o backend
 <p>Para isso siga os passos abaixo:</p>
 
-</div>
+### Vamos começar com o backend
 
 ```bash
 
@@ -92,3 +90,8 @@ $ npm run dev
 # O servidor irá iniciar em http://localhost:5173/
 
 ```
+## :eyes: Observações
+
+### Caso queira ver uma prévia de como é o projeto, abra a pasta media
+
+<p>Bom, por hora é apenas isso! Um grande abraço, e não se esqueça de abrir uma PR caso necessite.</p>
