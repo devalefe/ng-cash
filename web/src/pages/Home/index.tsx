@@ -14,15 +14,6 @@ import useAuth from "../../hooks/useAuth";
 
 import { api } from "../../lib/axios";
 
-export interface UserDataProps {
-  id: string;
-  username: string;
-  account: {
-    id: string;
-    balance: number;
-  }
-}
-
 interface TransactionsDataProps {
   cashOutTotal: number;
   cashInTotal: number;
@@ -33,11 +24,11 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [transactionsData, setTransactionsData] = useState<TransactionsDataProps>();
 
-  const { getAccessToken, clearAccessToken, setAccountData, accountData } = useAuth();
+  const { getAccessToken, clearAccessToken, accountData } = useAuth();
 
   const history = useHistory();
 
-  async function getUserData() {
+  async function getCashInOutData() {
     const accessToken = getAccessToken();
 
     if(!accessToken) {
@@ -47,15 +38,14 @@ export default function Home() {
     try {
       api.defaults.headers.common["Authorization"] = "Bearer " + accessToken;
 
-      const [
-        { accountData }, 
-        { cashOutTotal, cashInTotal, cashInOutData }
-      ] = await Promise.all([
-        await (await api.get("/account")).data,
-        await (await api.get("/transactions/today")).data
-      ]);
+      const { 
+        cashOutTotal,
+        cashInTotal,
+        cashInOutData
+      } = await (
+        await api.get("/transactions/today")
+      ).data;
 
-      setAccountData(accountData);
       setTransactionsData({
         cashOutTotal,
         cashInTotal,
@@ -79,7 +69,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    getUserData();
+    getCashInOutData();
   }, []);
 
   return (

@@ -1,6 +1,6 @@
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 
-import { UserDataProps } from "../pages/Home";
+import { api } from "../lib/axios";
 
 export interface AuthContextProps {
   saveAccessToken: (_accessToken: string) => void;
@@ -14,6 +14,16 @@ export interface AuthContextProps {
 interface ProviderProps {
   children: ReactNode;
 }
+
+export interface UserDataProps {
+  id: string;
+  username: string;
+  account: {
+    id: string;
+    balance: number;
+  }
+}
+
 
 export const AuthContext = createContext({} as AuthContextProps);
 
@@ -30,8 +40,15 @@ export default function AuthContextProvider({ children }: ProviderProps) {
 
   function getAccessToken() {
     const token = localStorage.getItem("@ng.cash:accessToken");
-    return token
+    return token;
   }
+
+  async function getAccountData() {
+    const { accountData } =  await (await api.get("/account")).data;
+    setAccountData(accountData);
+  }
+
+  useEffect(() => { getAccountData() }, []);
 
   return(
     <AuthContext.Provider value={{
