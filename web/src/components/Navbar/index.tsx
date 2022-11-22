@@ -1,12 +1,11 @@
-import { useContext } from "react";
-import { AuthContext } from "../../contexts/AuthContext";
+import useAuth from "../../hooks/useAuth";
 
 interface NavbarProps {
   title: string;
 }
 
 export default function Navbar({ title }: NavbarProps) {
-  const { accountData } = useContext(AuthContext)
+  const { accountData } = useAuth();
   
   return (
     <nav className="bg-white flex flex-shrink-0 h-20 w-full px-7 items-center justify-between shadow-md">
