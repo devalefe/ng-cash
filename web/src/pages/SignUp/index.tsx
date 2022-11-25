@@ -72,7 +72,7 @@ export default function SignUp() {
 
         <ErrorMessage message={message} clearMessage={() => setMessage(null)} />
 
-        <form className="w-80" onSubmit={handleSubmit}>
+        <form className="w-80 mt-6" onSubmit={handleSubmit}>
           <label className="text-base font-bold pb-1" htmlFor="username">Usuário</label>
           <div className="flex gap-2 pl-2 items-center mb-6 rounded-md border border-gray-300">
             <Icon.At size={16} />

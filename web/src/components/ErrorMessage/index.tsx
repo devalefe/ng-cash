@@ -9,7 +9,7 @@ export default function ErrorMessage({ message, clearMessage }: ErrorMessageProp
   if(!message) return <></>;
   
   return (
-    <div className="bg-red-300 text-red-900 flex gap-3 w-full mb-6 rounded-md items-center px-3">
+    <div className="bg-red-300 text-red-900 flex gap-3 w-full rounded-md items-center px-3">
       <Icon.Info size={22} />
       <span className="text-sm py-2">{message}</span>
       <button className="ml-auto" onClick={clearMessage}>
