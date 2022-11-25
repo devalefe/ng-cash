@@ -95,6 +95,6 @@ $ npm run dev
 
 ## Considerações finais
 
-### Caso queira ver uma prévia de como é o projeto, abra a pasta media ou c lique no [link](https://www.youtube.com/watch?v=6npR13NLj9E) para ver o vídeo demonstrativo.
+### Caso queira ver uma prévia de como é o projeto, abra a pasta media ou clique no [link](https://www.youtube.com/watch?v=6npR13NLj9E) para ver o vídeo demonstrativo.
 
 <p>Bom, por hora é apenas isso! Um grande abraço, e não se esqueça de abrir uma PR caso necessite.</p>
