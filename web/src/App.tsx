@@ -1,17 +1,20 @@
-import { BrowserRouter as RouterProvider } from "react-router-dom";
-
-import AuthContextProvider from './contexts/AuthContext';
-
+import { useContext } from "react";
 import AppRoutes from "./routes";
 
+import { AuthContext } from "./contexts/AuthContext";
+
+import Spinner from "./assets/spinner.svg";
+
 export default function App() {
-  return (
-    <div className="bg-gray-150 flex h-screen max-h-screen">
-      <AuthContextProvider>
-        <RouterProvider>
-          <AppRoutes />
-        </RouterProvider>
-      </AuthContextProvider>
-    </div>
-  );
+  const { isLoading } = useContext(AuthContext);
+
+  if (isLoading) {
+    return (
+      <div className="flex h-screen items-center justify-center">
+        <img className="m-auto w-24 h-24" src={Spinner} alt="Loading..." />
+      </div>
+    );
+  }
+
+  return <AppRoutes />;
 }

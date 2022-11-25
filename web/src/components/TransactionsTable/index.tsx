@@ -3,7 +3,7 @@ import * as Icon from "phosphor-react";
 import { format as dateFormat } from 'date-fns';
 import { ptBR } from "date-fns/locale";
 
-import { UserDataProps } from '../../pages/Home';
+import { UserDataProps } from "../../hooks/useAuth";
 
 export interface TransactionDataProps {
   id: string;

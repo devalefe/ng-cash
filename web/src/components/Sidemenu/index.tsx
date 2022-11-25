@@ -1,10 +1,11 @@
-import { Link, useHistory } from "react-router-dom";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import * as Icon from "phosphor-react";
 
-import ngcashLogo from "../../assets/ngcash-logo.svg";
-import { useContext } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
+
+import ngcashLogo from "../../assets/ngcash-logo.svg";
 
 interface SidemenuProps {
   activeItem:
@@ -29,14 +30,7 @@ export default function Sidemenu({ activeItem }: SidemenuProps) {
     },
   ]
 
-  const { clearAccessToken } = useContext(AuthContext);
-
-  const history = useHistory();
-
-  function handleLogout() {
-    clearAccessToken();
-    history.push("/entrar");
-  }
+  const { handleLogout } = useContext(AuthContext);
 
   return (
     <aside className="bg-black w-64 flex flex-col">

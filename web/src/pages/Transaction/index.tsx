@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
 
 import * as Icon from "phosphor-react";
 
@@ -8,38 +7,27 @@ import Sidemenu from "../../components/Sidemenu";
 import ModalTransaction from "../../components/ModalTransaction";
 import TransactionsTable, { TransactionDataProps } from "../../components/TransactionsTable";
 
+import { AuthContext } from "../../contexts/AuthContext";
+
 import Spinner from "../../assets/spinner.svg";
 
-import useAuth from "../../hooks/useAuth";
-
 import { api } from "../../lib/axios";
-
 
 export default function Transactions() {
   const [isLoading, setIsLoading] = useState(true);
   const [modalVisible, setModalVisible] = useState(false);
   const [transactions, setTransactions] = useState<TransactionDataProps[]>();
   
-  const { getAccessToken, clearAccessToken, accountData } = useAuth();
-
-  const history = useHistory();
+  const { userData, handleLogout } = useContext(AuthContext);
 
   async function getTransactionsByFilter(initialDate="", finalDate="", type="") {
     setIsLoading(true);
 
-    const accessToken = getAccessToken();
-
-    if(!accessToken) {
-      history.push("/entrar");
-    }
-
     try {
       const payload = { initialDate, finalDate, type };
+      const { cashInOutData } = await (await api.post("/transactions", payload)).data;
 
-      api.defaults.headers.common["Authorization"] = "Bearer " + accessToken;
-      const response = await (await api.post("/transactions", payload)).data;
-
-      setTransactions(response.cashInOutData);
+      setTransactions(cashInOutData);
 
     } catch(error: any) {
       const response = error.response.data.code;
@@ -47,10 +35,7 @@ export default function Transactions() {
       if(
         response === "FAST_JWT_MALFORMED" ||
         response === "FST_JWT_AUTHORIZATION_TOKEN_INVALID"
-      ) {
-        clearAccessToken();
-        history.push("/entrar");
-      }
+      ) handleLogout();
 
     } finally {
       setIsLoading(false);
@@ -59,9 +44,7 @@ export default function Transactions() {
 
   async function handleSubmit(event: any) {
     event.preventDefault();
-
     const { initialDate, finalDate, type } = event.currentTarget;
-
     getTransactionsByFilter(initialDate.value, finalDate.value, type.value);
   }
 
@@ -69,9 +52,7 @@ export default function Transactions() {
     setModalVisible(!modalVisible);
   }
 
-  useEffect(() => {
-    getTransactionsByFilter()
-  }, []);
+  useEffect(() => { getTransactionsByFilter() }, []);
 
   return (
     <div className="flex flex-1">
@@ -138,7 +119,7 @@ export default function Transactions() {
                   <img className="m-auto w-24 h-24" src={Spinner} alt="Loading..." />
                 </div> :
                 <TransactionsTable 
-                  accountData={accountData} 
+                  accountData={userData} 
                   transactions={transactions}
                 />
               }

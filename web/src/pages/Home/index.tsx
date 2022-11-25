@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
 
 import * as Icon from "phosphor-react";
 
@@ -8,9 +7,9 @@ import Sidemenu from "../../components/Sidemenu";
 import BalanceCard from "../../components/BalanceCard";
 import TransactionsTable, { TransactionDataProps } from "../../components/TransactionsTable";
 
-import Spinner from "../../assets/spinner.svg";
+import { AuthContext } from "../../contexts/AuthContext";
 
-import useAuth from "../../hooks/useAuth";
+import Spinner from "../../assets/spinner.svg";
 
 import { api } from "../../lib/axios";
 
@@ -24,53 +23,27 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [transactionsData, setTransactionsData] = useState<TransactionsDataProps>();
 
-  const { getAccessToken, clearAccessToken, accountData } = useAuth();
+  const { userData, handleLogout } = useContext(AuthContext);
 
-  const history = useHistory();
-
-  async function getCashInOutData() {
-    const accessToken = getAccessToken();
-
-    if(!accessToken) {
-      history.push("/entrar");
-    }
-    
+  async function getCashInOutData() {  
     try {
-      api.defaults.headers.common["Authorization"] = "Bearer " + accessToken;
-
-      const { 
-        cashOutTotal,
-        cashInTotal,
-        cashInOutData
-      } = await (
-        await api.get("/transactions/today")
-      ).data;
-
-      setTransactionsData({
-        cashOutTotal,
-        cashInTotal,
-        cashInOutData
-      });
+      const transactionDataToday = await api.get("/transactions/today");
+      setTransactionsData(transactionDataToday.data);
 
     } catch (error: any) {
       const response = error.response.data.code;
 
-      if(
+      if (
         response === "FAST_JWT_MALFORMED" ||
         response === "FST_JWT_AUTHORIZATION_TOKEN_INVALID"
-      ) {
-        clearAccessToken();
-        history.push("/entrar");
-      }
+      ) handleLogout();
 
     } finally {
       setIsLoading(false);
     }
   }
 
-  useEffect(() => {
-    getCashInOutData();
-  }, []);
+  useEffect(() => { getCashInOutData() }, []);
 
   return (
     <div className="flex flex-1">
@@ -92,7 +65,7 @@ export default function Home() {
                 valueColor="text-gray-100"
                 title="Balanço total"
                 icon={<Icon.Wallet size={24} />}
-                value={accountData?.account?.balance || 0}
+                value={userData?.account?.balance || 0}
               />
 
               <BalanceCard
@@ -121,7 +94,7 @@ export default function Home() {
 
               <div className="h-[87%] overflow-y-auto">
                 <TransactionsTable 
-                  accountData={accountData} 
+                  accountData={userData} 
                   transactions={transactionsData?.cashInOutData}
                 />
               </div>

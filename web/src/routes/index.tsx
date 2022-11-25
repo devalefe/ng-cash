@@ -10,12 +10,14 @@ import ErrorPage from "../pages/Error";
 
 export default function AppRoutes() {
   return (
-    <Routes>
-      <Route path="/" children={<Home />} exact />
-      <Route path="/transacoes" children={<Transaction />} />
-      <Route path="/cadastrar" children={<SignUp />} />
-      <Route path="/entrar" children={<SignIn />} />
-      <Route path="*" children={<ErrorPage />} />
-    </Routes>
+    <div className="bg-gray-150 flex h-screen max-h-screen">
+      <Routes>
+        <Route path="/" children={<Home />} exact />
+        <Route path="/transacoes" children={<Transaction />} />
+        <Route path="/cadastrar" children={<SignUp />} />
+        <Route path="/entrar" children={<SignIn />} />
+        <Route path="*" children={<ErrorPage />} />
+      </Routes>
+    </div>
   );
 }

@@ -1,36 +1,37 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 import * as Icon from "phosphor-react";
 
 import ErrorMessage, { parseErrorMessage } from "../../components/ErrorMessage";
 
-import useAuth from "../../hooks/useAuth";
+import { AuthContext } from "../../contexts/AuthContext";
 
 import { api } from "../../lib/axios";
 
 export default function SignIn() {
   const [isLoading, setIsLoading] = useState(false);
-  const [message, setMessage] = useState<string | null>(null);
+  const [message, setMessage] = useState(null);
 
-  const { saveAccessToken } = useAuth();
+  const { saveAccessToken, handleAuthenticate } = useContext(AuthContext);
 
   const history = useHistory();
 
   async function handleSubmit(event: any) {
     event.preventDefault();
-    setIsLoading(true);
-
-    const { username, password } = event.target;
-    const payload = { username: username.value, password: password.value };
 
     try {
-      const { accessToken } = await (await api.post("/signin", payload)).data;
+      const { username, password } = event.target;
+      const payload = { username: username.value, password: password.value };
+
+      const response = await (await api.post("/signin", payload)).data;
+      const { accessToken } = response;
 
       saveAccessToken(accessToken);
+      await handleAuthenticate();
       history.push("/");
-      
-    } catch(error: any) {
+
+    } catch (error: any) {
       const response = error.response.data.message;
       setMessage(parseErrorMessage(response));
 
