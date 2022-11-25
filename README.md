@@ -6,6 +6,8 @@
 
 <p>Basicamente é um sistema de transações bancárias, onde qualquer pessoa pode realizar um cadastro e já receber R$ 100,00. O projeto conta com uma API em Node e um front end em React, onde é possível realizar login, cadastro, novas transações e listagem das mesmas e conta com filtro baseado em tipo e/ou data.</p>
 
+### [Link demonstrativo](https://www.youtube.com/watch?v=6npR13NLj9E);
+
 ## :rocket: Tecnologias usadas
 
 ### Backend: 
@@ -27,7 +29,8 @@
 - [React-Router-DOM](https://reactrouter.com/en/main/upgrading/v5);
 - [Phosphor-React](https://www.npmjs.com/package/phosphor-react).
 
-### No banco de dados usei o [PostgreSQL](https://www.postgresql.org/docs/).
+### Banco de dados:
+- [PostgreSQL](https://www.postgresql.org/docs/).
 
 
 ## :white_check_mark: Requisitos
