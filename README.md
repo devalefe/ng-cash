@@ -6,9 +6,8 @@
 
 <p>Basicamente é um sistema de transações bancárias, onde qualquer pessoa pode realizar um cadastro e já receber R$ 100,00. O projeto conta com uma API em Node e um front end em React, onde é possível realizar login, cadastro, novas transações e listagem das mesmas e conta com filtro baseado em tipo e/ou data.</p>
 
-### Clique no [Link](https://www.youtube.com/watch?v=6npR13NLj9E) para ver o vídeo demonstrativo.
 
-## :rocket: Tecnologias usadas
+## Tecnologias usadas
 
 ### Backend: 
 - [Typescript](https://www.typescriptlang.org/docs/);
@@ -33,7 +32,7 @@
 - [PostgreSQL](https://www.postgresql.org/docs/).
 
 
-## :white_check_mark: Requisitos
+## Requisitos
 
 <p>Para executar o projeto você precisa instalar todas as dependêcias citadas acima.</p>
 <p>Para isso siga os passos abaixo:</p>
@@ -93,8 +92,9 @@ $ npm run dev
 # O servidor irá iniciar em http://localhost:5173/
 
 ```
-## :eyes: Observações
 
-### Caso queira ver uma prévia de como é o projeto, abra a pasta media
+## Considerações finais
+
+### Caso queira ver uma prévia de como é o projeto, abra a pasta media ou c lique no [link](https://www.youtube.com/watch?v=6npR13NLj9E) para ver o vídeo demonstrativo.
 
 <p>Bom, por hora é apenas isso! Um grande abraço, e não se esqueça de abrir uma PR caso necessite.</p>
