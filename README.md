@@ -6,7 +6,7 @@
 
 <p>Basicamente é um sistema de transações bancárias, onde qualquer pessoa pode realizar um cadastro e já receber R$ 100,00. O projeto conta com uma API em Node e um front end em React, onde é possível realizar login, cadastro, novas transações e listagem das mesmas e conta com filtro baseado em tipo e/ou data.</p>
 
-### [Link demonstrativo](https://www.youtube.com/watch?v=6npR13NLj9E);
+### Clique no [Link](https://www.youtube.com/watch?v=6npR13NLj9E) para ver o vídeo demonstrativo.
 
 ## :rocket: Tecnologias usadas
 
