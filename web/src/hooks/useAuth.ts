@@ -42,6 +42,8 @@ export default function useAuth() {
   async function handleAuthenticate() {
     try {
       const accessToken = localStorage.getItem("@ng.cash:accessToken");
+
+      if (!accessToken) return;
       
       api.defaults.headers.common['Authorization'] = "Bearer " + accessToken;
       const { accountData } = await (await api.get("/account")).data;
@@ -50,7 +52,7 @@ export default function useAuth() {
       setIsAuthenticated(true);
 
     } catch(error: any) {
-      const response = error.response.data;
+      const response = error.response.data.message;
       console.log(response);
 
     } finally {

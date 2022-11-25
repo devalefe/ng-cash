@@ -31,12 +31,9 @@ export default function Home() {
       setTransactionsData(transactionDataToday.data);
 
     } catch (error: any) {
-      const response = error.response.data.code;
+      const response = error.response;
 
-      if (
-        response === "FAST_JWT_MALFORMED" ||
-        response === "FST_JWT_AUTHORIZATION_TOKEN_INVALID"
-      ) handleLogout();
+      if (response.status !== 200) handleLogout();
 
     } finally {
       setIsLoading(false);
