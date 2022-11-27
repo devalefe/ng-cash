@@ -15,7 +15,7 @@
 
 
 <a name="#descricao">
-<h2>Descrição do projeto</h2>
+<h1>Descrição do projeto</h1>
 
 <p>Basicamente é um sistema de transações bancárias, onde qualquer pessoa pode realizar um cadastro e já receber R$ 100,00. O projeto conta com uma API em Node e um front end em React, onde é possível realizar login, cadastro, novas transações e listagem das mesmas e conta com filtro baseado em tipo e/ou data.</p>
 
