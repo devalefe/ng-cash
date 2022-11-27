@@ -147,7 +147,9 @@ $ npm run dev
 <h1>Considerações finais</h1>
 
 <p>
-Caso queira ver uma prévia de como é o projeto, abra a pasta [media](/media) ou clique no 
-[link](https://www.youtube.com/watch?v=6npR13NLj9E) para ver o vídeo demonstrativo no Youtube.<br>
-Bom, por hora é apenas isso! Um grande abraço, e não se esqueça de abrir uma PR caso necessite.
+Caso queira ver uma prévia de como é o projeto, abra a pasta 
+<a href="/media">media</a> 
+ou clique no 
+<a href="https://www.youtube.com/watch?v=6npR13NLj9E">link</a> 
+para ver o vídeo demonstrativo no Youtube.
 </p>
