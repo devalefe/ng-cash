@@ -21,16 +21,11 @@ export async function transactionsRoutes(fastify: FastifyInstance) {
 
     let { initialDate, finalDate, type } = request.body as DateIntervalBodyProps;
 
-    if(!initialDate) initialDate = new Date("1999-01-01");
+    if(!initialDate) initialDate = new Date(new Date("1970-01-01"));
     if(!finalDate) finalDate = new Date();
-    
-    initialDate = new Date(initialDate);
-    finalDate = new Date(finalDate);
 
-    initialDate.setHours(21,0,0,0);
-    finalDate.setHours(20,59,59,999);
-
-    finalDate.setDate(finalDate.getDate() + 1);
+    initialDate = new Date(new Date(initialDate).setHours(0,0,0,0));
+    finalDate = new Date(new Date(finalDate).setHours(23,59,59,999));
 
     const dateInterval = transactionsDateInterval.parse({ initialDate, finalDate });
 
@@ -189,8 +184,8 @@ export async function transactionsRoutes(fastify: FastifyInstance) {
     let initialDate = new Date(new Date().setHours(0,0,0,0));
     let finalDate = new Date();
 
-    initialDate = new Date(initialDate.toLocaleString('en-US', { timeZone: "America/Sao_Paulo" }));
-    finalDate = new Date(finalDate.toLocaleString('en-US', { timeZone: "America/Sao_Paulo" }));
+    initialDate = new Date(initialDate.toISOString());
+    finalDate = new Date(finalDate.toISOString());
 
     const cashOutSum = await prisma.transactions.aggregate({
       where: {
