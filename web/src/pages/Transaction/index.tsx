@@ -32,7 +32,7 @@ export default function Transactions() {
     } catch(error: any) {
       const response = error.response;
 
-      if (response.status !== 200) handleLogout();
+      if (response.status === 401 || response.status === 403) handleLogout();
 
     } finally {
       setIsLoading(false);
