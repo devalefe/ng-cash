@@ -53,7 +53,8 @@
 <a name="requisitos">
 <h1>Requisitos</h1>
 
-<p>Para executar o projeto você precisará do [Docker](https://docs.docker.com/). Caso não queira usar o Docker, deverá instalar todas as dependêcias citadas acima.</p>
+<p>Para executar o projeto você precisará do <a href="https://docs.docker.com/">Docker</a>.</p>
+<p>Caso não queira usar o Docker (não recomendado), deverá instalar todas as dependêcias citadas acima.</p>
 
 <br>
 
