@@ -52,8 +52,8 @@ export default function useAuth() {
       setIsAuthenticated(true);
 
     } catch(error: any) {
-      const response = error.response.data.message;
-      console.log(response);
+      const response = error.response;
+      console.log("Status: ", response.status, "\nMessage: ", response.data.message);
 
     } finally {
       setIsLoading(false);
