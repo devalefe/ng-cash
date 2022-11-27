@@ -77,7 +77,7 @@ $ docker compose up -d
 # Para gerar dados de teste (seed), basta rodar o comando abaixo
 $ docker exec api npx prisma migrate dev --name init
 
-# Por fim, você poderá abrir o sistema em http://localhost:80/
+# Por fim, você poderá abrir o sistema em http://localhost/
 
 ```
 
@@ -138,7 +138,7 @@ $ npm install
 # Inicialize o servidor em modo desenvolvimento
 $ npm run dev
 
-# O servidor irá iniciar em http://localhost:5173/
+# O servidor irá iniciar em http://localhost/
 
 ```
 

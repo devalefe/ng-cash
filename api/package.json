@@ -5,7 +5,7 @@
   "main": "src/server.ts",
   "scripts": {
     "migrate": "npx prisma migrate dev --name init",
-    "dev": "tsx watch src/server.ts 0.0.0.0:8080"
+    "dev": "tsx watch src/server.ts 0.0.0.0:3000"
   },
   "keywords": [],
   "author": "Álefe Fernandes Oliveira <dev.alefe@gmail.com>",
