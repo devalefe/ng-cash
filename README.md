@@ -32,7 +32,7 @@
 
 <p>
 Para executar o projeto você precisará do <a traget="_blank" href="https://docs.docker.com/">Docker</a>.
-Caso não queira usar o Docker (não recomendado), deverá instalar todas as dependêcias citadas abaixo.
+Caso não queira usar o <a traget="_blank" href="https://docs.docker.com/">Docker</a> <strong>(não recomendado)</strong>, deverá instalar todas as dependêcias citadas abaixo.
 </p>
 
 <a name="tecnologias">
@@ -85,8 +85,6 @@ $ docker exec api npx prisma migrate dev --name init
 
 <a name="init-without-docker">
 <h1>Iniciando o projeto sem o Docker</h1>
-
-<p>Caso opte por não usar o Docker (o que eu não recomendo), basta seguir os passos abaixo.</p>
 
 <p>Vamos começar com o backend:</p>
 
