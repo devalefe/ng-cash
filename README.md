@@ -7,8 +7,8 @@
   <li><a href="#descricao">Descrição geral do projeto</a></li>
   <li><a href="#tecnologias">Tecnologias usadas</a></li>
   <li><a href="#requisitos">Requisitos gerais</a></li>
-  <li><a href="#init-with-docker">Como iniciar o projeto com Docker</a></li>
-  <li><a href="#init-without-docker">Como iniciar o projeto <strong>SEM</strong> Docker</a></li>
+  <li><a href="#init-with-docker">Iniciando projeto com Docker</a></li>
+  <li><a href="#init-without-docker">Iniciando projeto sem Docker</a></li>
   <li><a href="#consideracoes">Considerações Finais</a></li>
 </ul>
 
@@ -22,8 +22,7 @@
 
 
 <a name="#tecnologias">
-
-## Tecnologias usadas
+<h1>Tecnologias usadas</h1>
 
 ### Backend: 
 - [Typescript](https://www.typescriptlang.org/docs/);
@@ -50,8 +49,7 @@
 
 
 <a name="requisitos">
-
-## Requisitos
+<h1>Requisitos</h1>
 
 ### Para executar o projeto você precisará do [Docker](https://docs.docker.com/). Caso não queira usar o Docker, deverá instalar todas as dependêcias citadas acima.
 
@@ -60,8 +58,9 @@
 
 
 <a name="init-with-docker">
+<h1>Iniciando o projeto com Docker</h1>
 
-### Iniciando o projeto com Docker:
+<p>Para iniciar o projeto com o Docker, basta seguir os passos abaixo:</p>
 
 ```bash
 
@@ -78,11 +77,14 @@ $ docker exec api npx prisma migrate dev --name init
 
 ```
 
+
+
 <a name="init-without-docker">
+<h1>Iniciando o projeto sem o Docker</h1>
 
-### Iniciando o projeto sem o Docker:
+<p>Caso opte por não usar o Docker (o que eu não recomendo), basta seguir os passos abaixo.</p>
 
-<p>Vamos começar com o backend</p>
+<p>Vamos começar com o backend:</p>
 
 ```bash
 
@@ -115,7 +117,7 @@ $ npm run dev
 
 ```
 
-<p>Agora para o frontend</p>
+<p>Agora para o frontend:</p>
 
 ```bash
 
@@ -138,10 +140,13 @@ $ npm run dev
 
 ```
 
+
+
 <a name="consideracoes">
+<h1>Considerações finais</h1>
 
-## Considerações finais
-
-### Caso queira ver uma prévia de como é o projeto, abra a pasta [media](/media) ou clique no [link](https://www.youtube.com/watch?v=6npR13NLj9E) para ver o vídeo demonstrativo no Youtube.
-
-<p>Bom, por hora é apenas isso! Um grande abraço, e não se esqueça de abrir uma PR caso necessite.</p>
+<p>
+Caso queira ver uma prévia de como é o projeto, abra a pasta [media](/media) ou clique no 
+[link](https://www.youtube.com/watch?v=6npR13NLj9E) para ver o vídeo demonstrativo no Youtube.<br>
+Bom, por hora é apenas isso! Um grande abraço, e não se esqueça de abrir uma PR caso necessite.
+</p>
