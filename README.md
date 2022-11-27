@@ -2,6 +2,8 @@
 
 <img src="/media/1.png" alt="" width="100%">
 
+<br>
+
 <h1>Sumário</h1>
 <ul>
   <li><a href="#descricao">Descrição geral do projeto</a></li>
@@ -12,14 +14,14 @@
   <li><a href="#consideracoes">Considerações Finais</a></li>
 </ul>
 
-
+<br>
 
 <a name="#descricao">
 <h1>Descrição do projeto</h1>
 
 <p>Basicamente é um sistema de transações bancárias, onde qualquer pessoa pode realizar um cadastro e já receber R$ 100,00. O projeto conta com uma API em Node e um front end em React, onde é possível realizar login, cadastro, novas transações e listagem das mesmas e conta com filtro baseado em tipo e/ou data.</p>
 
-
+<br>
 
 <a name="#tecnologias">
 <h1>Tecnologias usadas</h1>
@@ -46,16 +48,14 @@
 ### Banco de dados:
 - [PostgreSQL](https://www.postgresql.org/docs/).
 
-
+<br>
 
 <a name="requisitos">
 <h1>Requisitos</h1>
 
-### Para executar o projeto você precisará do [Docker](https://docs.docker.com/). Caso não queira usar o Docker, deverá instalar todas as dependêcias citadas acima.
+<p>Para executar o projeto você precisará do [Docker](https://docs.docker.com/). Caso não queira usar o Docker, deverá instalar todas as dependêcias citadas acima.</p>
 
-### Bom, vamos lá...
-
-
+<br>
 
 <a name="init-with-docker">
 <h1>Iniciando o projeto com Docker</h1>
@@ -77,7 +77,7 @@ $ docker exec api npx prisma migrate dev --name init
 
 ```
 
-
+<br>
 
 <a name="init-without-docker">
 <h1>Iniciando o projeto sem o Docker</h1>
@@ -140,7 +140,7 @@ $ npm run dev
 
 ```
 
-
+<br>
 
 <a name="consideracoes">
 <h1>Considerações finais</h1>
