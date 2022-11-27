@@ -23,6 +23,16 @@
 
 <br>
 
+<a name="requisitos">
+<h1>Requisitos</h1>
+
+<p>
+Para executar o projeto você precisará do <a traget="_blank" href="https://docs.docker.com/">Docker</a>.<br>
+Caso não queira usar o Docker (não recomendado), deverá instalar todas as dependêcias citadas abaixo.
+</p>
+
+<br>
+
 <a name="#tecnologias">
 <h1>Tecnologias usadas</h1>
 
@@ -47,14 +57,6 @@
 
 ### Banco de dados:
 - [PostgreSQL](https://www.postgresql.org/docs/).
-
-<br>
-
-<a name="requisitos">
-<h1>Requisitos</h1>
-
-<p>Para executar o projeto você precisará do <a href="https://docs.docker.com/">Docker</a>.</p>
-<p>Caso não queira usar o Docker (não recomendado), deverá instalar todas as dependêcias citadas acima.</p>
 
 <br>
 
@@ -148,8 +150,8 @@ $ npm run dev
 
 <p>
 Caso queira ver uma prévia de como é o projeto, abra a pasta 
-<a href="/media">media</a> 
+<a traget="_blank" href="/media">media</a> 
 ou clique no 
-<a href="https://www.youtube.com/watch?v=6npR13NLj9E">link</a> 
+<a traget="_blank" href="https://www.youtube.com/watch?v=6npR13NLj9E">link</a> 
 para ver o vídeo demonstrativo no Youtube.
 </p>
