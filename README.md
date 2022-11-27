@@ -31,8 +31,6 @@ Para executar o projeto você precisará do <a traget="_blank" href="https://doc
 Caso não queira usar o Docker (não recomendado), deverá instalar todas as dependêcias citadas abaixo.
 </p>
 
-<br>
-
 <a name="#tecnologias">
 
 ### Backend: 
