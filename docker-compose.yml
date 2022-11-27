@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  web:
+    container_name: web
+    image: ng-cash-web:0.0.1
+    build:
+      context: ./web
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+
+  api:
+    container_name: api
+    image: ng-cash-api:0.0.1
+    build:
+      context: ./api
+    ports:
+      - "3000:3000"
+    environment:
+      - JWT_SECRET_KEY=an-jwt-secret-key-here
+      - DATABASE_URL=postgresql://postgres:1234@db:5432/ng_cash?schema=public
+    depends_on:
+      - db
+
+  db:
+    container_name: db
+    image: postgres:14
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
+    volumes:
+      - nps_data:/var/lib/postgresql/data
+
+volumes:
+  nps_data: {}

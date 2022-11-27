@@ -34,7 +34,24 @@
 
 ## Requisitos
 
-<p>Para executar o projeto você precisa instalar todas as dependêcias citadas acima.</p>
+### Para executar o projeto você precisará do [Docker](https://docs.docker.com/).
+
+```bash
+
+# Após instalar o Docker, basta rodar este comando
+$ docker compose up -d
+
+# A flag -d indica que o container rodará em modo detached, 
+# ou seja, não ocupará o terminal. Viva ao Docker!
+
+# Para gerar dados de teste (seed), basta rodar o comando abaixo
+$ docker exec api npx prisma migrate dev --name init
+
+# Por fim, você poderá abrir o sistema em http://localhost:80/
+
+```
+
+### Caso não queira usar o Docker, deverá instalar todas as dependêcias citadas acima. 
 <p>Para isso siga os passos abaixo:</p>
 
 ### Vamos começar com o backend

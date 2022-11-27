@@ -1,10 +1,11 @@
 {
   "name": "ng-cash-api",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "An API that provides routes for users to perform transactions, signin and signup",
-  "main": "index.js",
+  "main": "src/server.ts",
   "scripts": {
-    "dev": "tsx watch src/server.ts"
+    "migrate": "npx prisma migrate dev --name init",
+    "dev": "tsx watch src/server.ts 0.0.0.0:8080"
   },
   "keywords": [],
   "author": "Álefe Fernandes Oliveira <dev.alefe@gmail.com>",

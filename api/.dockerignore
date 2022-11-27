@@ -1,0 +1,6 @@
+node_modules
+
+**/migrations
+**/ERD.svg
+
+.env.example
