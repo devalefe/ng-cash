@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">NG.Cash | A Carteira Digital do Futuro</h1>
+<h1 align="center">NG.Cash | A Carteira Digital do Futuro</h1>
 
 <img src="/media/1.png" alt="" width="100%">
 
