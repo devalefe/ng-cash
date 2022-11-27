@@ -16,7 +16,7 @@
 
 <br>
 
-<a name="#descricao">
+<a name="descricao">
 <h1>Descrição do projeto</h1>
 
 <p>Basicamente é um sistema de transações bancárias, onde qualquer pessoa pode realizar um cadastro e já receber R$ 100,00. O projeto conta com uma API em Node e um front end em React, onde é possível realizar login, cadastro, novas transações e listagem das mesmas e conta com filtro baseado em tipo e/ou data.</p>
@@ -31,7 +31,7 @@ Para executar o projeto você precisará do <a traget="_blank" href="https://doc
 Caso não queira usar o Docker (não recomendado), deverá instalar todas as dependêcias citadas abaixo.
 </p>
 
-<a name="#tecnologias">
+<a name="tecnologias">
 
 ### Backend: 
 - [Typescript](https://www.typescriptlang.org/docs/);
