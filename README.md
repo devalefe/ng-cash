@@ -1,6 +1,4 @@
-<h1>Apresentação do projeto</h1>
-
-<img src="/media/0.png" alt="apresentação do projeto" width="100%" />
+<h1 style=>NG.Cash | A Carteira Digital do Futuro</h1>
 
 <h1>Sumário</h1>
 <ul>
@@ -12,12 +10,16 @@
   <li><a href="#consideracoes">Considerações Finais</a></li>
 </ul>
 
-<a name="#descricao"></a>
+
+
+<a name="#descricao">
 <h2>Descrição do projeto</h2>
 
 <p>Basicamente é um sistema de transações bancárias, onde qualquer pessoa pode realizar um cadastro e já receber R$ 100,00. O projeto conta com uma API em Node e um front end em React, onde é possível realizar login, cadastro, novas transações e listagem das mesmas e conta com filtro baseado em tipo e/ou data.</p>
 
-<a name="#tecnologias"></a>
+
+
+<a name="#tecnologias">
 ## Tecnologias usadas
 
 ### Backend: 
@@ -43,14 +45,17 @@
 - [PostgreSQL](https://www.postgresql.org/docs/).
 
 
-<a name="requisitos"></a>
+
+<a name="requisitos">
 ## Requisitos
 
 ### Para executar o projeto você precisará do [Docker](https://docs.docker.com/). Caso não queira usar o Docker, deverá instalar todas as dependêcias citadas acima.
 
 ### Bom, vamos lá...
 
-<a name="init-with-docker"></a>
+
+
+<a name="init-with-docker">
 ### Iniciando o projeto com Docker:
 
 ```bash
@@ -68,7 +73,7 @@ $ docker exec api npx prisma migrate dev --name init
 
 ```
 
-<a name="init-without-docker"></a>
+<a name="init-without-docker">
 ### Iniciando o projeto sem o Docker:
 
 <p>Vamos começar com o backend</p>
@@ -127,7 +132,7 @@ $ npm run dev
 
 ```
 
-<a name="consideracoes"></a>
+<a name="consideracoes">
 ## Considerações finais
 
 ### Caso queira ver uma prévia de como é o projeto, abra a pasta [media](/media) ou clique no [link](https://www.youtube.com/watch?v=6npR13NLj9E) para ver o vídeo demonstrativo no Youtube.
