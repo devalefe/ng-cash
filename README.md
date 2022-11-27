@@ -6,11 +6,11 @@
 
 <h1>Sumário</h1>
 <ul>
-  <li><a href="#descricao">Descrição geral do projeto</a></li>
-  <li><a href="#tecnologias">Tecnologias usadas</a></li>
+  <li><a href="#descricao">Descrição do projeto</a></li>
   <li><a href="#requisitos">Requisitos gerais</a></li>
-  <li><a href="#init-with-docker">Iniciando projeto com Docker</a></li>
-  <li><a href="#init-without-docker">Iniciando projeto sem Docker</a></li>
+  <li><a href="#tecnologias">Tecnologias usadas</a></li>
+  <li><a href="#init-with-docker">Iniciando com Docker</a></li>
+  <li><a href="#init-without-docker">Iniciando sem Docker</a></li>
   <li><a href="#consideracoes">Considerações Finais</a></li>
 </ul>
 
