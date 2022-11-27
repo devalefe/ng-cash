@@ -34,7 +34,6 @@ Caso não queira usar o Docker (não recomendado), deverá instalar todas as dep
 <br>
 
 <a name="#tecnologias">
-<h1>Tecnologias usadas</h1>
 
 ### Backend: 
 - [Typescript](https://www.typescriptlang.org/docs/);
