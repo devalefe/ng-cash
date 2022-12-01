@@ -74,7 +74,7 @@ export default function Transactions() {
                   name="type" 
                   id="type"
                 >
-                  <option value="">Selecione o tipo</option>
+                  <option value="">Todos</option>
                   <option value="cashIn">Entrada</option>
                   <option value="cashOut">Saída</option>
                 </select>
