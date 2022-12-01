@@ -68,7 +68,7 @@ Caso não queira usar o <a traget="_blank" href="https://docs.docker.com/">Docke
 
 ```bash
 
-# Após instalar o Docker, basta entrar nas pasta ng-cash
+# Após instalar o Docker, basta entrar na pasta ng-cash
 $ cd ng-cash
 
 # e rodar este comando, o docker compose cuidará do resto
