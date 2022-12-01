@@ -68,8 +68,8 @@ Caso não queira usar o <a traget="_blank" href="https://docs.docker.com/">Docke
 
 ```bash
 
-# Após instalar o Docker, basta rodar este comando
-$ docker compose up -d
+# Após instalar o Docker, basta entrar nas pasta ng-cash e rodar este comando
+$ cd ng-cash && docker compose up -d
 
 # A flag -d indica que o container rodará em modo detached, 
 # ou seja, não ocupará o terminal. Viva ao Docker!
