@@ -31,8 +31,8 @@
 <h1>Requisitos</h1>
 
 <p>
-Para executar o projeto você precisará do <a traget="_blank" href="https://docs.docker.com/">Docker</a>.
-Caso não queira usar o <a traget="_blank" href="https://docs.docker.com/">Docker</a> <strong>(não recomendado)</strong>, deverá instalar todas as dependêcias citadas abaixo.
+Para executar o projeto você precisará do <a traget="_blank" href="https://docs.docker.com/">Docker</a>,
+caso não queira usá-lo <strong>(não recomendado)</strong>, deverá instalar todas as dependêcias citadas abaixo.
 </p>
 
 <a name="tecnologias">
